@@ -22,7 +22,8 @@ public class Main {
 
         double mediaNotas = (nota1 + nota2 + nota3) / 3.0;
 
-        System.out.println("Sua média de notas é " + mediaNotas);
+        String mediaFormatada = String.format("%.2f", mediaNotas);
+        System.out.println("Sua média de notas é " + mediaFormatada);
 
         if (mediaNotas >=7){
             System.out.println("Você foi aprovado!");

@@ -1,0 +1,272 @@
+
+> [!todo] 01 - Fluxograma
+> Faça um algoritmo que leia os valores de A, B, C e em seguida imprima na tela a soma entre A e B é mostre se a soma é menor que C.
+
+![[Pasted image 20260504211742.png]]
+
+---
+
+2 - Faça um algoritmo para receber um número qualquer e imprimir na tela se o número é par ou ímpar, positivo ou negativo.
+
+3 - Faça um algoritmo que leia dois valores inteiros A e B, se os valores de A e B forem iguais, deverá somar os dois valores, caso contrário devera multiplicar A por B. Ao final de qualquer um dos cálculos deve-se atribuir o resultado a uma variável C e imprimir seu valor na tela.
+
+---
+
+> [!todo] 04 - Fluxograma
+> Faça um algoritmo que receba um número inteiro e imprima na tela o seu antecessor e o seu sucessor.
+
+![[Pasted image 20260505202802.png]]
+
+> [!bug] Código
+> 
+
+```
+import java.util.Scanner;  
+  
+public class Main {  
+    public static void main(String[] args) {  
+        Scanner entrada = new Scanner(System.in);  
+  
+        int inteiro = 0;  
+  
+        System.out.println("Insira um número inteiro: ");  
+        inteiro = entrada.nextInt();  
+  
+        int antecessor = inteiro - 1;  
+        int sucessor = inteiro + 1;  
+  
+        System.out.println("O número antecessor é: " + antecessor);  
+  
+        System.out.println("O número inteiro é: " + inteiro);  
+  
+        System.out.println("O número sucessor é: " + sucessor);  
+    }  
+}
+```
+
+---
+
+
+5 - Faça um algoritmo que leia o valor do salário mínimo e o valor do salário de um usuário, calcule quantos salários mínimos esse usuário ganha e imprima na tela o resultado. (Base para o Salário mínimo R$ 1.293,20).
+
+6 - Faça um algoritmo que leia um valor qualquer e imprima na tela com um reajuste de 5%.
+
+7 - Faça um algoritmo que leia dois valores booleanos (lógicos) e determine se ambos são VERDADEIRO ou FALSO.
+
+8 - Faça um algoritmo que leia três valores inteiros diferentes e imprima na tela os valores em ordem decrescente.
+
+---
+
+> [!todo] 09 - Fluxograma
+> Faça um algoritmo que calcule o IMC (Índice de Massa Corporal) de uma pessoa, leia o seu peso e sua altura e imprima na tela sua condição.
+
+![[Pasted image 20260505195107.png]]
+
+> [!bug] Código
+> 
+
+```
+import java.util.Scanner;  
+  
+public class Main {  
+    public static void main(String[] args) {  
+  
+        Scanner entrada = new Scanner(System.in);  
+  
+        double peso = 0;  
+        double altura = 0;  
+  
+        System.out.println("Insira seu peso: ");  
+        peso = entrada.nextInt();  
+  
+        System.out.println("Insira sua altura em cm: ");  
+        altura = entrada.nextInt();  
+  
+        double alturaMetros = altura / 100.0;  
+  
+        double imc = peso / (alturaMetros * alturaMetros);  
+  
+        if (imc < 18.5){  
+            System.out.printf("Você está abaixo do peso seu imc é: %.2f%n",imc);  
+        } else if (imc > 24.9){  
+            System.out.printf("Você está acima do peso seu imc é: %.2f%n",imc);  
+        } else {  
+            System.out.printf("Você está no peso ideal seu imc é: %.2f%n",imc);  
+        }  
+    }  
+}
+```
+
+> [!tip] Bibliografia
+> https://www.javaprogressivo.net/2012/08/java-recebendo-dados-do-usuario-classe.html 
+---
+
+---
+
+> [!info] 10 - Fluxograma
+> Faça um algoritmo que leia três notas obtidas por um aluno, e imprima na tela a média das notas além disso exiba se ele foi aprovado caso a nota seja maior ou igual a 7, reprovado se menor que  ou se ele está de recuperação.
+
+![[Pasted image 20260514212059.png]]
+
+> [!bug] Código:
+
+```
+import java.util.Scanner;  
+  
+public class Main {  
+    public static void main(String[] args) {  
+  
+        Scanner entrada = new Scanner(System.in);  
+  
+        int nota1;  
+        int nota2;  
+        int nota3;  
+  
+        System.out.println("Insira sua nota: ");  
+        nota1 = entrada.nextInt();  
+  
+        System.out.println("Insira sua nota: ");  
+        nota2 = entrada.nextInt();  
+  
+        System.out.println("Insira sua nota: ");  
+        nota3 = entrada.nextInt();  
+  
+        double mediaNotas = (nota1 + nota2 + nota3) / 3.0;  
+  
+        String mediaFormatada = String.format("%.2f", mediaNotas);  
+        System.out.println("Sua média de notas é " + mediaFormatada);  
+  
+        if (mediaNotas >=7){  
+            System.out.println("Você foi aprovado!");  
+        } else if (mediaNotas < 5) {  
+            System.out.println("Você foi reprovado!");  
+        } else {  
+            System.out.println("Você está de recuperação!");  
+        }  
+  
+    }  
+}
+```
+
+> [!tip] Bibliografia
+> https://www.javaprogressivo.net/2012/08/java-recebendo-dados-do-usuario-classe.html 
+
+---
+
+11 - Faça um algoritmo que leia quatro notas obtidas por um aluno, calcule a média das nota obtidas, imprima na tela o nome do aluno e se o aluno foi aprovado ou reprovado. Para o aluno ser considerado aprovado sua média final deve ser maior ou igual a 7.
+
+12 - Faça um algoritmo que leia o valor de um produto e determine o valor que deve ser pago, conforme a escolha da forma de pagamento
+ pelo comprador e imprima na tela o valor final do produto a ser pago. Utilize os códigos da tabela de condições de pagamento para efetuar o cálculo adequado.
+ Tabela de Código de Condições de Pagamento
+ 1 - À Vista em Dinheiro ou Pix, recebe 15% de desconto
+ 2 - À Vista no cartão de crédito, recebe 10% de desconto
+ 3 - Parcelado no cartão em duas vezes, preço normal do produto sem juros
+ 4 - Parcelado no cartão em três vezes ou mais, preço normal do produto mais juros de 10%
+
+---
+
+> [!todo] 13 - Fluxograma
+> Faça algoritmo que leia o nome e a idade de uma pessoa e imprima na tela o nome da pessoa e se ela é maior ou menor de idade. 
+
+![[Pasted image 20260505191914.png]]
+
+> [!bug] Código
+> 
+
+```
+import java.util.Scanner;  
+  
+public class Main {  
+    public static void main(String[] args) {  
+  
+        Scanner entrada = new Scanner(System.in);  
+  
+        String nome = "";  
+        int idade;  
+  
+        System.out.println("Insira seu nome: ");  
+        nome = entrada.nextLine();  
+  
+        System.out.println("Insira sua idade: ");  
+        idade = entrada.nextInt();  
+  
+        if (idade >= 18){  
+  
+            System.out.println(nome +" você é maior de idade");  
+  
+        }else{  
+  
+            System.out.println(nome + " você é menor de idade");  
+              
+        }  
+    }  
+}
+```
+
+---
+
+14 - Faça um algoritmo que receba um valor A e B, e troque o valor de A por B e o valor de B por A e imprima na tela os valores.
+
+15 - Faça um algoritmo que leia o ano em que uma pessoa nasceu, imprima na tela quantos anos, meses e dias essa pessoa ja viveu. Leve em  consideração o ano com 365 dias e o mês com 30 dias.
+
+16 - Faça um algoritmo que leia três valores que representam os três lados de um triângulo e verifique se são válidos, determine se o triângulo é equilátero, isósceles ou escaleno.
+
+17 - Faça um algoritmo que leia uma temperatura em Fahrenheit e calcule a temperatura correspondente em grau Celsius. Imprima na tela as duas temperaturas. Fórmula: C = (5 * ( F-32) / 9)
+
+18 - Francisco tem 1,50m e cresce 2 centímetros por ano, enquanto Sara tem 1,10m e cresce 3 centímetros por ano. Faça um algoritmo que calcule e imprima na tela em quantos anos serão necessários para que Sara seja maior que Francisco.
+
+✅ 19 - Faça um algoritmo que receba um valor inteiro e imprima na tela a sua tabuada.
+
+![[Pasted image 20260504212259.png]]
+
+✅ 20 - Faça um algoritmo que calcule os juros compostos com base no valor, tempo e taxa de juros, e imprima na tela o valor calculado.
+
+![[Pasted image 20260504212413.png]]
+
+###### ✅ 21 - Faça um algoritmo que imprima na tela a tabuada de 1 até 10.
+
+![[Pasted image 20260504212430.png]]
+
+✅ 22 - O BANCO deseja desenvolver um sistema para analisar transações bancárias diárias de um cliente. O analista de projetos responsável designou você como analista desenvolvedor responsável. 
+
+O sistema deve: Ler 3 valores de transações (positivos = depósitos, negativos = saques). 
+
+Calcular o saldo final após todas as transações. Exibir o maior valor depositado e o maior valor sacado. 
+
+Se o saldo final for negativo, mostrar a mensagem: "Atenção: Seu saldo está negativo no valor de {valor}! Risco de redução no limite de crédito." Caso contrário, retornar o saldo do cliente com a mensagem abaixo: "Seu novo saldo é: {saldo} "
+
+![[Pasted image 20260511212228.png]]
+
+## Extras
+
+00 - Faça um algoritmo que aplique o desconto de 10% caso o valor da compra seja maior que 100 reais se não apenas exiba o valor da compra.
+
+Fluxograma:
+
+![[Pasted image 20260513210600.png]]
+
+Código em Java:
+
+```
+public class Main {  
+    public static void main(String[] args) {  
+  
+        int valorCompra = 2000;  
+        double desconto = valorCompra * 0.1;  
+        double valorDescontado = 0;  
+  
+        if (valorCompra >= 100){  
+            valorDescontado = valorCompra - desconto;  
+  
+            System.out.println("O valor da compra com desconto foi " + valorDescontado);  
+        }  
+        else {  
+            System.out.println("O valor da compra foi: " + valorCompra);  
+        }  
+  
+        }  
+}
+```
+
+
+01 - 
